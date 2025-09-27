@@ -1,11 +1,11 @@
 from django.shortcuts import render, HttpResponse
 # Create your views here.
 
-def home(index):
-    return HttpResponse("This is the home page of the blog application.")
+def home(request):
+    return render(request, 'home/home.html')
 
-def contact(index):
-    return HttpResponse("This is the contact page of the blog application.")
+def contact(request):
+    return render(request, 'home/contact.html')
 
-def about(index):
-    return HttpResponse("This is the about page of the blog application.")
+def about(request):
+    return render(request, 'home/about.html')
