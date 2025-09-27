@@ -5,9 +5,9 @@ from django.db import models
 class Post(models.Model):
     serial_number = models.AutoField(primary_key=True)
     title = models.CharField(max_length=50)
-    content = models.CharField(max_length=15)
+    content = models.TextField()
     author = models.CharField(max_length=50)
-    slug = models.TextField()
+    slug = models.CharField(max_length=15)
     time_stamp = models.DateTimeField(blank=True)
 
     def __str__(self):
