@@ -10,3 +10,6 @@ class Contact(models.Model):
     email = models.CharField(max_length=50)
     content = models.TextField()
     time_stamp = models.DateTimeField(auto_now_add=True, blank=True)
+
+    def __str__(self):
+        return "Message from " + self.name + ' - ' + self.email
