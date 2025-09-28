@@ -1,7 +1,17 @@
 {% extends 'home/base.html' %}
-{% block title %}
+ {% block title %}
     Blog Post
+ {% endblock %}
+
+{% block blogactive %}
+    active
 {% endblock %}
-{% block name %}
-    Blog Post 
+{% block body %}
+<article class="container">
+    <h2 class="blog-post-title mb-1">{{post.title}}</h2> 
+    <p class="blog-post-meta">{{post.time_stamp}}<a href="/about">{{post.author}}</a></p> 
+    <p>{{post.content}}</p> 
+</article>
 {% endblock %}
+
+
